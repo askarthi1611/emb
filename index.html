@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #484c58;
+        margin: 40px 75px;
+        color: #fbfbfb;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .container_div {
+        background-color: #121315;
+        border-radius: 25px;
+        min-height: 200px;
+        padding: 20px;
+        margin: 20px;
+      }
+      .container_title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        font-size: 36px;
+      }
+      .selection {
+        border: 2px solid #262729 !important;
+        color: #fbfbfb;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #0000;
+      }
+      .container_title_span {
+        width: 6px;
+        height: 36px;
+        background-color: #4dfcc8;
+        border-radius: 20px;
+      }
+      .container_head {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .right_side_con {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+      }
+      .download_btn {
+        padding: 5px 10px;
+        border: 2px solid #4dfcc8;
+        border-radius: 5px;
+        background-color: #4dfcc8;
+      }
+      .user_img img {
+        width: 150px;
+        border-radius: 50%;
+      }
+      .user_details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .user_sub {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 40px;
+      }
+      .container_content {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .user_sub_head {
+        color: #8d8e90;
+      }
+      .user_name {
+        font-size: 26px;
+      }
+      .moni_div {
+        display: flex;
+        gap: 10px;
+        background: #2a2b2d;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .moni_div_h {
+        background: #2a2b2d;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .moni_value {
+        font-size: 22px;
+      }
+      .moni_head {
+        font-size: 14px;
+        color: #6c6d6f;
+      }
+      .ontime {
+        background-color: #4dfcc855;
+        color: #4dfcc8;
+      }
+      .moni_date {
+        display: flex;
+        justify-content: space-between;
+      }
+      .inout {
+        display: flex;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container_div">
+      <div class="container_head">
+        <div class="container_title">
+          <div class="container_title_span"></div>
+          Detail Employee
+        </div>
+        <div class="right_side_con">
+          <div class="themeinput">
+            <select class="selection">
+              <option value="This Year">This Year</option>
+              <option value="This Month">This Month</option>
+              <option value="This Week">This Week</option>
+            </select>
+          </div>
+          <div>
+            <button class="download_btn">Download Info</button>
+          </div>
+        </div>
+      </div>
+      <div class="container_content">
+        <div class="user_img">
+          <img src="user.jpeg" alt="" />
+        </div>
+        <div class="user_details">
+          <div class="user_name">Natashia Khaleira</div>
+          <div class="user_sub">
+            <div class="user_sub_div">
+              <div class="user_sub_head">Role</div>
+              <div class="user_sub_value">Head of UX Design</div>
+            </div>
+            <div class="user_sub_div">
+              <div class="user_sub_head">Phone Number</div>
+              <div class="user_sub_value">(+62) 812 3456-7890</div>
+            </div>
+            <div class="user_sub_div">
+              <div class="user_sub_head">Email Address</div>
+              <div class="user_sub_value">natasiakhaleira@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="monitor">
+        <div class="row">
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4"
+          >
+            <div class="moni_div">
+              <div class="moni_img">
+                <img src="" alt="" />
+              </div>
+              <div class="moni_detil">
+                <div class="moni_value">309</div>
+                <div class="moni_head">Total Attendance</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4"
+          >
+            <div class="moni_div">
+              <div class="moni_img">
+                <img src="" alt="" />
+              </div>
+              <div class="moni_detil">
+                <div class="moni_value">08:46</div>
+                <div class="moni_head">Avg Check In Time</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4"
+          >
+            <div class="moni_div">
+              <div class="moni_img">
+                <img src="" alt="" />
+              </div>
+              <div class="moni_detil">
+                <div class="moni_value">17.04</div>
+                <div class="moni_head">Avg Check Out Time</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4"
+          >
+            <div class="moni_div">
+              <div class="moni_img">
+                <img src="" alt="" />
+              </div>
+              <div class="moni_detil">
+                <div class="moni_value">Role Model</div>
+                <div class="moni_head">Employee Predicator</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_div">
+      <div class="container_head">
+        <div class="container_title">
+          <div class="container_title_span"></div>
+          Attendance History
+        </div>
+        <div class="right_side_con"></div>
+      </div>
+      <div class="container_content">
+        <div class="monitor">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4"
+            >
+              <div class="moni_div_h">
+                <div class="moni_date">
+                  <div class="date_div">
+                    <span></span><span>March 08 2023</span>
+                  </div>
+                  <div class="ontime status_time">On Time</div>
+                </div>
+                <div class="inout">
+                  <div class="moni_detil">
+                    <div class="moni_head">Check In Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                  <div class="moni_detil">
+                    <div class="moni_head">Check Out Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4"
+            >
+              <div class="moni_div_h">
+                <div class="moni_date">
+                  <div class="date_div">
+                    <span></span><span>March 08 2023</span>
+                  </div>
+                  <div class="ontime status_time">On Time</div>
+                </div>
+                <div class="inout">
+                  <div class="moni_detil">
+                    <div class="moni_head">Check In Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                  <div class="moni_detil">
+                    <div class="moni_head">Check Out Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4"
+            >
+              <div class="moni_div_h">
+                <div class="moni_date">
+                  <div class="date_div">
+                    <span></span><span>March 08 2023</span>
+                  </div>
+                  <div class="ontime status_time">On Time</div>
+                </div>
+                <div class="inout">
+                  <div class="moni_detil">
+                    <div class="moni_head">Check In Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                  <div class="moni_detil">
+                    <div class="moni_head">Check Out Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4"
+            >
+              <div class="moni_div_h">
+                <div class="moni_date">
+                  <div class="date_div">
+                    <span></span><span>March 08 2023</span>
+                  </div>
+                  <div class="ontime status_time">On Time</div>
+                </div>
+                <div class="inout">
+                  <div class="moni_detil">
+                    <div class="moni_head">Check In Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                  <div class="moni_detil">
+                    <div class="moni_head">Check Out Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4"
+            >
+              <div class="moni_div_h">
+                <div class="moni_date">
+                  <div class="date_div">
+                    <span></span><span>March 08 2023</span>
+                  </div>
+                  <div class="ontime status_time">On Time</div>
+                </div>
+                <div class="inout">
+                  <div class="moni_detil">
+                    <div class="moni_head">Check In Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                  <div class="moni_detil">
+                    <div class="moni_head">Check Out Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4"
+            >
+              <div class="moni_div_h">
+                <div class="moni_date">
+                  <div class="date_div">
+                    <span></span><span>March 08 2023</span>
+                  </div>
+                  <div class="ontime status_time">On Time</div>
+                </div>
+                <div class="inout">
+                  <div class="moni_detil">
+                    <div class="moni_head">Check In Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                  <div class="moni_detil">
+                    <div class="moni_head">Check Out Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4"
+            >
+              <div class="moni_div_h">
+                <div class="moni_date">
+                  <div class="date_div">
+                    <span></span><span>March 08 2023</span>
+                  </div>
+                  <div class="ontime status_time">On Time</div>
+                </div>
+                <div class="inout">
+                  <div class="moni_detil">
+                    <div class="moni_head">Check In Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                  <div class="moni_detil">
+                    <div class="moni_head">Check Out Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4"
+            >
+              <div class="moni_div_h">
+                <div class="moni_date">
+                  <div class="date_div">
+                    <span></span><span>March 08 2023</span>
+                  </div>
+                  <div class="ontime status_time">On Time</div>
+                </div>
+                <div class="inout">
+                  <div class="moni_detil">
+                    <div class="moni_head">Check In Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                  <div class="moni_detil">
+                    <div class="moni_head">Check Out Time</div>
+                    <div class="moni_value">08:53</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
