@@ -16,14 +16,35 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       body {
         background-color: #484c58;
-        margin: 40px 75px;
+        margin: 2vh 4vw;
         color: #fbfbfb;
         font-family: "Poppins", sans-serif;
         font-weight: 400;
         font-style: normal;
+      }
+      .monitor {
+        max-height: 400px;
+        overflow: auto;
+      }
+      .monitor::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
       }
       .container_div {
         background-color: #121315;
@@ -53,6 +74,7 @@
         border-radius: 20px;
       }
       .container_head {
+        gap: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -118,15 +140,59 @@
         background-color: #4dfcc855;
         color: #4dfcc8;
       }
+      .late {
+        background-color: #d2d0a055;
+        color: #d2d0a0;
+      }
+      .absent {
+        background-color: #a2a3a555;
+        color: #a2a3a5;
+      }
+      .status_time {
+        padding: 3px 7px;
+        border-radius: 36px;
+      }
       .moni_date {
         display: flex;
         justify-content: space-between;
       }
       .inout {
         display: flex;
-        margin: 10px 0;
+        margin: 10px 0 0;
         align-items: center;
         justify-content: space-between;
+      }
+      .img_div img {
+        width: 30px;
+        padding: 6px;
+      }
+      .img_div {
+        border: 1px solid #f5f5f5;
+        border-radius: 10px;
+        padding: 0px 5px;
+      }
+      .pagintion_div {
+        border: 1px solid #f5f5f5;
+        border-radius: 10px;
+        padding: 0px 12px;
+      }
+      .pagintion {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .list_data {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+      }
+      @media screen and (max-width: 719px) {
+        .right_side_con {
+          width: 100%;
+          justify-content: flex-end;
+        }
       }
     </style>
   </head>
@@ -236,7 +302,36 @@
           <div class="container_title_span"></div>
           Attendance History
         </div>
-        <div class="right_side_con"></div>
+        <div class="right_side_con">
+          <div class="list_data">
+            <div class="img_div">
+              <img
+                src="https://img.icons8.com/?size=100&id=10777&format=png&color=ffffff"
+                alt=""
+              />
+            </div>
+            <div class="img_div">
+              <img
+                src="https://img.icons8.com/?size=100&id=8113&format=png&color=ffffff"
+                alt=""
+              />
+            </div>
+            <div class="img_div">
+              <img
+                src="https://img.icons8.com/?size=100&id=izBicqrRIBpp&format=png&color=ffffff"
+                alt=""
+              />
+              Sort
+            </div>
+            <div class="img_div">
+              <img
+                src="https://img.icons8.com/?size=100&id=3004&format=png&color=ffffff"
+                alt=""
+              />
+              Filter
+            </div>
+          </div>
+        </div>
       </div>
       <div class="container_content">
         <div class="monitor">
@@ -247,18 +342,20 @@
               <div class="moni_div_h">
                 <div class="moni_date">
                   <div class="date_div">
-                    <span></span><span>March 08 2023</span>
+                    <span
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i> </span
+                    ><span>March 01 2023</span>
                   </div>
                   <div class="ontime status_time">On Time</div>
                 </div>
                 <div class="inout">
                   <div class="moni_detil">
                     <div class="moni_head">Check In Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">01:00</div>
                   </div>
                   <div class="moni_detil">
                     <div class="moni_head">Check Out Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">11:00</div>
                   </div>
                 </div>
               </div>
@@ -269,18 +366,20 @@
               <div class="moni_div_h">
                 <div class="moni_date">
                   <div class="date_div">
-                    <span></span><span>March 08 2023</span>
+                    <span
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i> </span
+                    ><span>March 02 2023</span>
                   </div>
                   <div class="ontime status_time">On Time</div>
                 </div>
                 <div class="inout">
                   <div class="moni_detil">
                     <div class="moni_head">Check In Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">02:00</div>
                   </div>
                   <div class="moni_detil">
                     <div class="moni_head">Check Out Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">12:00</div>
                   </div>
                 </div>
               </div>
@@ -291,18 +390,20 @@
               <div class="moni_div_h">
                 <div class="moni_date">
                   <div class="date_div">
-                    <span></span><span>March 08 2023</span>
+                    <span
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i> </span
+                    ><span>March 03 2023</span>
                   </div>
-                  <div class="ontime status_time">On Time</div>
+                  <div class="late status_time">Late</div>
                 </div>
                 <div class="inout">
                   <div class="moni_detil">
                     <div class="moni_head">Check In Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">03:00</div>
                   </div>
                   <div class="moni_detil">
                     <div class="moni_head">Check Out Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">13:00</div>
                   </div>
                 </div>
               </div>
@@ -313,18 +414,20 @@
               <div class="moni_div_h">
                 <div class="moni_date">
                   <div class="date_div">
-                    <span></span><span>March 08 2023</span>
+                    <span
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i> </span
+                    ><span>March 04 2023</span>
                   </div>
-                  <div class="ontime status_time">On Time</div>
+                  <div class="late status_time">Late</div>
                 </div>
                 <div class="inout">
                   <div class="moni_detil">
                     <div class="moni_head">Check In Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">04:00</div>
                   </div>
                   <div class="moni_detil">
                     <div class="moni_head">Check Out Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">14:00</div>
                   </div>
                 </div>
               </div>
@@ -335,18 +438,20 @@
               <div class="moni_div_h">
                 <div class="moni_date">
                   <div class="date_div">
-                    <span></span><span>March 08 2023</span>
+                    <span
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i> </span
+                    ><span>March 05 2023</span>
                   </div>
                   <div class="ontime status_time">On Time</div>
                 </div>
                 <div class="inout">
                   <div class="moni_detil">
                     <div class="moni_head">Check In Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">05:00</div>
                   </div>
                   <div class="moni_detil">
                     <div class="moni_head">Check Out Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">15:00</div>
                   </div>
                 </div>
               </div>
@@ -357,18 +462,20 @@
               <div class="moni_div_h">
                 <div class="moni_date">
                   <div class="date_div">
-                    <span></span><span>March 08 2023</span>
+                    <span
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i> </span
+                    ><span>March 06 2023</span>
                   </div>
-                  <div class="ontime status_time">On Time</div>
+                  <div class="absent status_time">Absent</div>
                 </div>
                 <div class="inout">
                   <div class="moni_detil">
                     <div class="moni_head">Check In Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">-</div>
                   </div>
                   <div class="moni_detil">
                     <div class="moni_head">Check Out Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">-</div>
                   </div>
                 </div>
               </div>
@@ -379,18 +486,20 @@
               <div class="moni_div_h">
                 <div class="moni_date">
                   <div class="date_div">
-                    <span></span><span>March 08 2023</span>
+                    <span
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i> </span
+                    ><span>March 07 2023</span>
                   </div>
                   <div class="ontime status_time">On Time</div>
                 </div>
                 <div class="inout">
                   <div class="moni_detil">
                     <div class="moni_head">Check In Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">06:00</div>
                   </div>
                   <div class="moni_detil">
                     <div class="moni_head">Check Out Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">16:00</div>
                   </div>
                 </div>
               </div>
@@ -401,23 +510,56 @@
               <div class="moni_div_h">
                 <div class="moni_date">
                   <div class="date_div">
-                    <span></span><span>March 08 2023</span>
+                    <span
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i> </span
+                    ><span>March 08 2023</span>
                   </div>
                   <div class="ontime status_time">On Time</div>
                 </div>
                 <div class="inout">
                   <div class="moni_detil">
                     <div class="moni_head">Check In Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">07:00</div>
                   </div>
                   <div class="moni_detil">
                     <div class="moni_head">Check Out Time</div>
-                    <div class="moni_value">08:53</div>
+                    <div class="moni_value">17:00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-4"
+            >
+              <div class="moni_div_h">
+                <div class="moni_date">
+                  <div class="date_div">
+                    <span
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i> </span
+                    ><span>March 09 2023</span>
+                  </div>
+                  <div class="absent status_time">Absent</div>
+                </div>
+                <div class="inout">
+                  <div class="moni_detil">
+                    <div class="moni_head">Check In Time</div>
+                    <div class="moni_value">-</div>
+                  </div>
+                  <div class="moni_detil">
+                    <div class="moni_head">Check Out Time</div>
+                    <div class="moni_value">-</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="pagintion">
+          <div class="pagintion_div">1</div>
+          <div class="pagintion_div">2</div>
+          <div class="pagintion_div">3</div>
+          <div class="pagintion_div">4</div>
+          <div class="pagintion_div">5</div>
         </div>
       </div>
     </div>
